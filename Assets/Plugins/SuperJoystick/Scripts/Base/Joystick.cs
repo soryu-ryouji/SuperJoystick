@@ -10,8 +10,8 @@ namespace SuperJoystick
         public float Vertical { get { return (snapY) ? SnapFloat(input.y, AxisOptions.Vertical) : input.y; } }
         public Vector2 Direction { get { return new Vector2(Horizontal, Vertical); } }
 
-        private UnityEvent onPointerUpEvent = new UnityEvent();
-        private UnityEvent onPointerDownEvent = new UnityEvent();
+        [SerializeField] private UnityEvent onPointerUpEvent = new UnityEvent();
+        [SerializeField] private UnityEvent onPointerDownEvent = new UnityEvent();
 
         public void RegisterOnPointerUp(UnityAction action)
         {
